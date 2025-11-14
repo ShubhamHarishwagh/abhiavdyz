@@ -18,7 +18,7 @@ jobs:
 
   jobs-transfrom:
     runs-on: ubuntu-latest
-
+    needs: jobs-extract
     steps:
       - name: checkout codem
         uses: actions/checkout@v4
@@ -30,7 +30,7 @@ jobs:
   
   jobs-load:
     runs-on: ubuntu-latest
-
+    needs: jobs-transfrom
     steps:
       - name: checkout codem
         uses: actions/checkout@v4
