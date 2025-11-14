@@ -1,1 +1,21 @@
+name: githubaction
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  jobs-extract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout codem
+        uses: actions/checkout@v4
+
+      - name: e.py
+        run: python e.py 
+
+
+
 
