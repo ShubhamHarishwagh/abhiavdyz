@@ -16,6 +16,38 @@ jobs:
       - name: e.py
         run: python e.py 
 
+  jobs-extract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout codem
+        uses: actions/checkout@v4
+
+      - name: e.py
+        run: python e.py 
+
+  jobs-tarnsfrom:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout codem
+        uses: actions/checkout@v4
+
+      - name: t.py
+        run: python t.py 
+  
+    jobs-load:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout codem
+        uses: actions/checkout@v4
+
+      - name: l.py
+        run: python l.py
+
+
+
 
 
 
